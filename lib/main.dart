@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hot_e/views/home/home.dart';
-import 'package:hot_e/views/splash_screen/splash.dart';
+import 'package:hot_e/Routes/route.dart';
+import 'package:hot_e/theme/theme.dart';
+import 'package:hot_e/views/screen/splash_screen/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Q Mart',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        textTheme: GoogleFonts.interTextTheme(
-          Theme.of(context).textTheme,
-        )
-      ),
+      theme: light(),
       home:  MyHomePage(),
+      onGenerateRoute: RouteManager.generateRoute,
     );
   }
 }
