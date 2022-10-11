@@ -7,23 +7,6 @@ import 'package:fluttertoast/fluttertoast.dart';
 class Home extends StatelessWidget {
   late DateTime currentBackPressTime;
 
-/*  Future<bool?> showWarning(BuildContext context) async => showDialog<bool>(context: context,
-      builder: (context)=> AlertDialog(
-        title: Text('Do you want to exit app?'),
-        actions: [
-          ElevatedButton(onPressed: (){
-
-            Navigator.pop(context,false);
-
-          }, child: Text('No')),
-
-          ElevatedButton(onPressed: (){
-
-            Navigator.pop(context,true);
-          }, child: Text('yes'))
-
-        ],
-      ));*/
 
 
 
@@ -58,7 +41,6 @@ class Home extends StatelessWidget {
 
     return WillPopScope(
 
-
       onWillPop: showExitPopup,
 
       child: Scaffold(
@@ -71,6 +53,9 @@ class Home extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
+
+              Image.asset('assets/logo.png'),
+
               Text('hello'),
             ],
           ) ,
