@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hot_e/views/screen/auth/forget_password.dart';
 
 
 //My own import
@@ -47,7 +48,7 @@ class RouteManager {
 
       case forgetPassword :
         return MaterialPageRoute(builder: (context){
-          return  Home();
+          return  ForgetPassword();
         });
 
 
