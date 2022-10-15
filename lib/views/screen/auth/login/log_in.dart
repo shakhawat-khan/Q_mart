@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hot_e/Routes/route.dart';
+import 'package:hot_e/util/style.dart';
 import 'package:hot_e/views/base/custom_button.dart';
 
 import 'package:page_transition/page_transition.dart';
@@ -56,7 +57,7 @@ class Login extends StatelessWidget {
     return WillPopScope(
       onWillPop: showExitPopup,
       child: Scaffold(
-        appBar: AppBar(title: Text('Log In'),automaticallyImplyLeading: false),
+        appBar: AppBar(title: Text('Log In',style: interBold,),automaticallyImplyLeading: false),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.only(top: 70.0, right: 30.0, left: 30.0),
@@ -97,6 +98,8 @@ class Login extends StatelessWidget {
                     divider: true
                 ),
 
+                SizedBox(height: 10,),
+
                 Container(
                   alignment: Alignment.bottomRight,
                   child: InkWell(
@@ -115,7 +118,7 @@ class Login extends StatelessWidget {
                 ),
 
                 const SizedBox(
-                  height: 11.0,
+                  height: 35.0,
                 ),
 
                  CustomButton(name: 'Log IN',onPressed: (){
@@ -123,7 +126,7 @@ class Login extends StatelessWidget {
                  }
                  ),
 
-                SizedBox(height: 15,),
+                SizedBox(height: 35,),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -267,9 +270,6 @@ class Login extends StatelessWidget {
                   ),
                 ],
               )
-
-
-
               ],
             ),
           ),

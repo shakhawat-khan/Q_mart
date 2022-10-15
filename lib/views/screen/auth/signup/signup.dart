@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hot_e/Routes/route.dart';
+import 'package:hot_e/util/style.dart';
+import 'package:hot_e/views/base/custom_button.dart';
 import 'package:hot_e/views/base/custom_text_field.dart';
 
 import '../../home/home.dart';
@@ -76,7 +78,7 @@ class _SignUpState extends State<SignUp> {
       onWillPop:showExitPopup ,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Sign Up'),
+          title: Text('Sign Up',style: interBold,),
           automaticallyImplyLeading: false,
         ),
         body: SingleChildScrollView(
@@ -173,48 +175,9 @@ class _SignUpState extends State<SignUp> {
 
                 const SizedBox(height: 50,),
 
-                InkWell(
-                  child: Container(
-                    height: 45.0,
-                    child: Material(
-                      borderRadius: BorderRadius.circular(20.0),
-                      shadowColor: Colors.grey[300],
-                      color: Colors.white,
-                      borderOnForeground: false,
-                      elevation: 5.0,
-                      child: GestureDetector(
-                        child: Center(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.check,
-                                color: Theme.of(context).primaryColor,
-                              ),
-                              const SizedBox(
-                                width: 7.0,
-                              ),
-                              Text(
-                                "SIGN UP",
-                                style: TextStyle(
-                                  color: Theme.of(context).primaryColor,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Home()),
-                    );
-                  },
-                ),
+               CustomButton(name: 'Sign Up', onPressed: (){
+                 Navigator.of(context).pushNamed(RouteManager.home);
+               }),
 
                 const SizedBox(
                   height: 15.0,

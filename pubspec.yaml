@@ -42,6 +42,10 @@ dependencies:
   simple_animations: ^5.0.0+2
   page_transition: ^2.0.9
   clay_containers: ^0.3.2
+  carousel_slider: ^4.1.1
+  cached_network_image: ^3.2.2
+  smooth_page_indicator: ^1.0.0+2
+
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +74,7 @@ flutter:
     - assets/logo.png
     - assets/google_icon.png
     - assets/fb_icon.png
+    - assets/slider/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
